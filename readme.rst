@@ -1,70 +1,32 @@
-###################
-What is CodeIgniter
-###################
+Para empezar importar la base de datos llamada enreda_prueba.sql
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Copiar el proyecto de CodeIgniter en el servidor que vayamos a usar. En mi caso en la carpeta hdocs de XAMPP.
 
-*******************
-Release Information
-*******************
+La url que debemos escribir para acceder al proyecto es: localhost/enreda_prueba
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Esto nos dirigirá a un pequeño login. Para acceder tendremos el usuario: admin // contraseña: admin
 
-**************************
-Changelog and New Features
-**************************
+Nos redirecciona al frontend de Facturas. Se puede comprobar que tiene las funciones del CRUD.
+Crear, Leer, Actualizar y Borrar.
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Para crear una nueva factura solo debemos darle al boton azul.
+	- El id estará oculto.
+	-La fecha es la actural.
+	-Nos permite subir un fichero.
+	-El iva y el precio total se calcularan solos.
+	
+	Para modificar le damos al boton naranja.
+		-La id no es modificable.
+		-El iva y total se vuelven a calcular solos.
+		
+Para borrar usamos el boton rojo.
+	-Borra el registro.
+	
+Cuando clicamos en Contratos nos muestra la lista de contratos que hay en la BD.
 
-*******************
-Server Requirements
-*******************
-
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+El proceso para comprobar el CRUD es el mismo que el anterior:
+	-Añadir nuevo contrato --> BOTON AZUL
+	-Modificar contrato --> BOTON NARANJA
+	-Borrar contrato --> BOTON ROJO (ESTO NOS BORRARÁ LAS FACTURAS ASOCIADAS A LOS CONTRATOS, YA QUE NO ES CONVENIENTE TENER FACTURAS NULAS)
+	
+	Ya que no se han dado datos sobre LICITACIONES y el archivo mostraba indicios de que ha sido borrado con intencion no se ha llevado acabo esa parte.
